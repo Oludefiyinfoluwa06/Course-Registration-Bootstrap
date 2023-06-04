@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEXT GRADIENT</title>
+  <style>
+    p{
+      font-size: 48px;
+      font-weight: bolder;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to left, #004424, #d61d3c);
+      color: transparent;
+      -webkit-background-clip: text;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: inline-block;
+    }
+    p::after{
+      display: block;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, #004424, #d61d3c);
+      left: 0;
+      bottom: 0;
+      transform: scaleX(0);
+      transform-origin: top left;
+      transition: .5s;
+    }
+    p:hover::after{
+      transform-origin: top right;
+      transform: scaleX(1);
+    }
+  </style>
+</head>
+<body>
+  <p>Fiyinfoluwa</p>
+
+<script src="./text-gd.js"></script>
+</body>
+</html>
